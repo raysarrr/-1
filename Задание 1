@@ -1,1 +1,198 @@
-file:///C:/Users/PC/index.html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Помидоры - Главная страница</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: pink;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            background-color: pink;
+            color: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .section {
+            border: 2px solid pink;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .photomin {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Главная страница</a>
+            </li>
+            <li>
+                <a href="page1.html">Основное</a>
+            </li>
+            <li>
+                <a href="page2.html">Разновидности</a>
+            </li>
+            <li>
+                <a href="page3.html">Почему помидоры лучше огурцов</a>
+            </li>
+            <li>
+                <a href="page4.html">Покупки</a>
+            </li>
+            <li>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BC%D0%B0%D1%82" target="_blank">Узнать больше</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Помидоры</h1>
+    <p>
+        На этом сайте вы сможете узнать всякое о помидорах.
+    </p>
+    <h2 id="start">Содержание</h2>
+    <ul>
+        <li>
+            <a href="#about">О помидорах</a>
+        </li>
+        <li>
+            <a href="#kinds">Виды помидоров</a>
+        </li>
+        <li>
+            <a href="history">Историческая справка</a>
+        </li>
+        <li>
+            <a href="popular">Самые популярные виды</a>
+        </li>
+    </ul>
+    <div class="section">
+        <h2 id="about">О помидорах</h2>
+        <p>
+            Помидоры - сочные плоды, как правило имеющие красный цвет и круглую форму.
+        </p>
+    </div>
+    <div class="section">
+        <h2 id="kinds">Виды помидоров</h2>
+        <ul>
+            <li>
+                "Загадка" - имеет круглые и ровные плоды с плотной кожицей
+            </li>
+            <li>
+                "Малиновый гигант" - имеет круглые и сладкие плоды сплюснотой формы
+            </li>
+            <li>
+                "Анастасия" - имеет высокие кусты и дает большое количество плодов за короткое время
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2 id="history">Историческая справка</h2>
+        <ol>
+            <li>
+                Родиной культурного томата ряд исследователей считают Перу.
+            </li>
+            <li>
+                Индейцы, выращивавшие и употреблявшие томаты в пищу, называли это растение «туматль». 
+            </li>
+            <li>
+                Выращивать томаты начали в южных районах страны в XVIII веке. В Европе в это время томаты считались несъедобными, но у нас их выращивали как декоративную и пищевую культуру.
+            </li>
+        </ol>
+    </div>
+<div class="section">
+    <h2 id="popular">Самые популярные виды</h2>
+    <ul>
+        <li>
+           В 2024:
+           <ul>
+            <li>
+                Орлиное сердце;
+            </li>
+            <li>
+                кенигсберг;
+            </li>
+            <li>
+                абаканский розовый.
+            </li>
+           </ul>
+           </li>
+           <li>
+            В 2023:
+            <ul>
+                <li>
+                    Карапуз;
+                </li>
+                <li>
+                    большая мамочка;
+                </li>
+                <li>
+                    зеленая тайна личинки.
+                </li>
+            </ul>
+           </li>
+           <li>
+            В 2022:
+            <ul>
+                <li>
+                    Бобкат;
+                </li>
+                <li>
+                    полбиг;
+                </li>
+                <li>
+                    кмициц.
+                </li>
+            </ul>
+           </li>
+    </ul>
+</div>
+<a href="#start">Содержание</a>
+<h2>Мой любимый помидор</h2>
+<a href="https://ikd.ru/wp-content/uploads/2020/06/tomat-sorta-byche-serdce1.jpg" target="_blank">
+    <img src="https://ikd.ru/wp-content/uploads/2020/06/tomat-sorta-byche-serdce1.jpg" alt="Бычье сердце" class="photomin">
+</a>
+<p>
+    Нажмите на миниатюру, чтобы открыть фото в полном размере (в новой вкладке).
+</p>
+<script>
+    const currentLocation = location.href;
+
+    const menuItem = document.querySelectorAll('nav ul li a');
+
+    menuItem.forEach(item => {
+        if (item.href === currentLocation) {
+            item.classList.add('active');
+        }
+    });
+    </script>
+</body>
+</html>
